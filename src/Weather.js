@@ -6,12 +6,13 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       date: new Date(response.data.dt * 1000),
@@ -57,7 +58,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo info={weatherData} />
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
