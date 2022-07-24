@@ -4,6 +4,9 @@
   color: rgb(135, 135, 135);
   padding: 16px;
   border-radius: 4px;
+  border: solid 10px;
+  background-color: #d5def5;
+  border-style: outset;
 }
 
 .Weather form {
@@ -15,6 +18,7 @@
   font-weight: 700;
   line-height: 29px;
   margin: 20px 0 0 0;
+  color: #0d6efd;
 }
 
 .Weather ul {
@@ -41,15 +45,18 @@
   font-size: 50px;
   line-height: 64px;
   font-weight: 400;
-  margin-left: 10px;
 }
 
 .Weather .unit {
-  font-size: 15px;
+  font-size: 20px;
   color: rgb(33, 33, 33);
   font-weight: 400;
   position: relative;
   line-height: 1;
   top: -30px;
   margin-left: 0px;
+}
+
+.WeatherForecast-day {
+  padding-top: 20px;
 }
